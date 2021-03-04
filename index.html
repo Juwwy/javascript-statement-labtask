@@ -17,13 +17,12 @@
 
         do{
             checkUser = prompt("Who's there?");
-        }while(checkUser != checkUser || checkUser != "Admin"){
+        }while(checkUser != checkUser ){
             if(checkUser == "Admin"){
-                let userName = prompt("Enter your Username:");
                 let passWord = prompt("Enter your Password:");
-                if(userName === "Admin" && passWord === "TheMaster"){
+                if( passWord === "TheMaster"){
                 alert("Welcome");
-                }else if(userName === "Admin" && passWord !== "TheMaster" ){
+                }else if( passWord !== "TheMaster" ){
                     alert("Wrong Password");
                 }else{
                     alert("Cancelled!")
