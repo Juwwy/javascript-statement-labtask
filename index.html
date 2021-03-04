@@ -11,21 +11,43 @@
 
 
     <script>
-    
-    let userName = prompt("Enter your Username:");
-    let passWord = prompt("Enter your Password:");
-    if(userName !="" && passWord !="" ){
-        if(userName === "Admin" && passWord === "TheMaster"){
-            alert("Welcome");
 
-        }else if(userName == "admin" && passWord == "themaster"){
-        alert("I don't know you!");
-        }else{
-            alert("Wrong Password");
+        let checkUser
+        
+
+        do{
+            checkUser = prompt("Who's there?");
+        }while(checkUser != checkUser || checkUser != "Admin"){
+            if(checkUser == "Admin"){
+                let userName = prompt("Enter your Username:");
+                let passWord = prompt("Enter your Password:");
+                if(userName === "Admin" && passWord === "TheMaster"){
+                alert("Welcome");
+                }else if(userName === "Admin" && passWord !== "TheMaster" ){
+                    alert("Wrong Password");
+                }else{
+                    alert("Cancelled!")
+                }
+
+
+
+            } else if(checkUser != "Admin") {
+                alert("i don't know you!");
+            } else{
+                alert("Cancelled")
+            } 
+
+            
+                
+            
         }
-    }else{
-        alert("Cancelled!")
-    }
+
+        
+
+
+        
+
+
     
     
     
